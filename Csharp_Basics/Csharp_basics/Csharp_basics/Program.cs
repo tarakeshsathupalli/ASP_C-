@@ -34,26 +34,43 @@ namespace Csharp_basics
                 for (int j = 0; j < num.Length; j++)
                     Console.WriteLine(num[j]);*/
             /*if else statement */
-            Console.WriteLine("enter a number");
+            labl:
+            Console.WriteLine("1. small  2.Medium  3.Large");
             int a = int.Parse(Console.ReadLine());
+            int totalBill = 0;
             /*if (a == 1)
                 Console.WriteLine("user entered {0}", a);
             else
                 Console.WriteLine("user entered {0}", a);*/
             /*switch statement*/
+
             switch (a)
             {
                 case 1:
-                    Console.WriteLine("user entered {0}", a);
+                    totalBill += 1;
                     break;
                 case 2:
-                    Console.WriteLine("user entered {0}", a);
+                    totalBill += 2;
+                    break;
+                case 3:
+                    totalBill += 3;
                     break;
                 default:
-                    Console.WriteLine("user entered {0}", a);
+                    Console.WriteLine("you have entered wrong option");
                     break;
+            }    
+             Console.WriteLine("Do you wanna continue Y/N?");
+             string userchoice = Console.ReadLine();
+             if (userchoice == "Y")
+                 goto labl;
+             else
+                Console.WriteLine("bill is {0}", totalBill);
+              
 
-            }
+             
+
+          
+
         }
     }
 }
