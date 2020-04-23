@@ -68,7 +68,7 @@ namespace Csharp_basics
 
             /* loops*/
             /* while*/
-            Console.WriteLine("enter a number to print even numbers upto");
+            /*Console.WriteLine("enter a number to print even numbers upto");
             int no = int.Parse(Console.ReadLine());
             int itr = 0;
             /*while (itr<=no)
@@ -79,15 +79,24 @@ namespace Csharp_basics
             }*/
 
             /* do while*/
-            do
+            /* do
+             {
+                 if (itr % 2 == 0)
+                     Console.Write(itr + " ");
+                 itr++;
+             }
+             while (itr <= no);*/
+            int[] num = new int[3];
+            for (int j = 0; j < num.Length; j++)
+                num[j] = j;
+            foreach(int itm in num)
             {
-
+                Console.WriteLine(itm);
             }
-            while (itr <= no);
 
-             
 
-          
+
+
 
         }
     }
